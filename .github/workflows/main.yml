@@ -11,7 +11,7 @@ jobs:
       - name: Build .NET project
         run: dotnet build Build.csproj -c Release /p:CI=true
       - name: Test
-        run: dotnet test Butters.Extensions.String --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage /p:CI=true
+        run: dotnet test Butters.Extensions.String.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage /p:CI=true
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:

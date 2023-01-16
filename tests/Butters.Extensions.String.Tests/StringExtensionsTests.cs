@@ -145,7 +145,7 @@ namespace Butters.Extensions.String.Tests
 
     public class TestModel
     {
-        public string A { get; set; }
+        public string? A { get; set; }
         public int B { get; set; }
         public int? C { get; set; }
     }

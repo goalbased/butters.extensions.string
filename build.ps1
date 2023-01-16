@@ -5,17 +5,20 @@ param(
     [string] $PullRequestNumber
 )
 
-Write-Host "Run Parameters:" -ForegroundColor Cyan
-Write-Host "  CreatePackages: $CreatePackages"
-Write-Host "  RunTests: $RunTests"
-Write-Host "  dotnet --version:" (dotnet --version)
-
 $packageOutputFolder = "$PSScriptRoot\.nupkgs"
 
 if ($PullRequestNumber) {
     Write-Host "Building for a pull request (#$PullRequestNumber), skipping packaging." -ForegroundColor Yellow
     $CreatePackages = $false
 }
+
+Write-Host "Run Parameters:" -ForegroundColor Cyan
+Write-Host "  CreatePackages: $CreatePackages"
+Write-Host "  PullRequestNumber: $PullRequestNumber"
+Write-Host "  RunTests: $RunTests"
+Write-Host "  dotnet --version:" (dotnet --version)
+Write-Host "  PSScriptRoot: $PSScriptRoot"
+Write-Host "  CreatePackages: $CreatePackages"
 
 Write-Host "Building all projects (Build.csproj traversal)..." -ForegroundColor "Magenta"
 dotnet build ".\Build.csproj" -c Release /p:CI=true

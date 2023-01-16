@@ -41,7 +41,6 @@ logs/
 docker/
 
 #Copy from dapper
-TestResults/
 *.coverage
 .dotnet/*
 BenchmarkDotNet.Artifacts/

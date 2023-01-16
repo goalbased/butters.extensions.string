@@ -13,14 +13,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael.mao\\Desktop\\lab\\butters.extensions.string\\Butters.Extensions.String\\Butters.Extensions.String.csproj",
+      "projectUniqueName": "C:\\Users\\Michael.mao\\Desktop\\lab\\Butters.Extensions.String\\Butters.Extensions.String\\Butters.Extensions.String.csproj",
       "projectName": "Butters.Extensions.String",
-      "projectPath": "C:\\Users\\Michael.mao\\Desktop\\lab\\butters.extensions.string\\Butters.Extensions.String\\Butters.Extensions.String.csproj",
+      "projectPath": "C:\\Users\\Michael.mao\\Desktop\\lab\\Butters.Extensions.String\\Butters.Extensions.String\\Butters.Extensions.String.csproj",
       "packagesPath": "C:\\Users\\Michael.mao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael.mao\\Desktop\\lab\\butters.extensions.string\\Butters.Extensions.String\\obj\\",
+      "outputPath": "C:\\Users\\Michael.mao\\Desktop\\lab\\Butters.Extensions.String\\Butters.Extensions.String\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michael.mao\\Desktop\\lab\\butters.extensions.string\\NuGet.Config",
+        "C:\\Users\\Michael.mao\\Desktop\\lab\\Butters.Extensions.String\\NuGet.Config",
         "C:\\Users\\Michael.mao\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Butters.Extensions.String\Butters.Extensions.String.csproj" />
+    <ProjectReference Include="..\..\Butters.Extensions.String\Butters.Extensions.String.csproj" />
   </ItemGroup>
 
 </Project>

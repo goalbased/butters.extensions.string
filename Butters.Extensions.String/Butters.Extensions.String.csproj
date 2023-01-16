@@ -9,14 +9,19 @@
     <Description>A high performance string extension</Description>
     <Copyright>2023 Butters</Copyright>
     <PackageIcon>butters.png</PackageIcon>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/goalbased/butters.extensions.string</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>string,extension,string extension</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\butters.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

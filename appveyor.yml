@@ -22,3 +22,14 @@ build_script:
 test: off
 artifacts:
   - path: .\.nupkgs\*.nupkg
+
+deploy:
+  - provider: NuGet
+    server:
+    on:
+      branch: main
+    api_key:
+      secure: Tsm27Yg1J/9f/zj96jqNAyxK+bwpp1Ew61C1wA7k89D6MHUFvKPGvon2LsHGjddg
+    skip_symbols: false
+    symbol_server: https://www.myget.org/F/stackoverflow/symbols/api/v2/package
+    artifact: /.*(\.|\.s)nupkg/

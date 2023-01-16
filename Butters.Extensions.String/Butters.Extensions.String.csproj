@@ -14,6 +14,7 @@
     <PackageTags>string,extension,string extension</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://goalbased.github.io/StringExtension/</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

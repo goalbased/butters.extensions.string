@@ -17,18 +17,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{EFDCF303-E
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45462358-EEA0-4261-B3F2-EE43EB8BB170}"
-ProjectSection(SolutionItems) = preProject
-	.editorconfig = .editorconfig
-	appveyor.yml = appveyor.yml
-	build.ps1 = build.ps1
-	Dapper.png = Dapper.png
-	Directory.Build.props = Directory.Build.props
-	global.json = global.json
-	docs\index.md = docs\index.md
-	License.txt = License.txt
-	nuget.config = nuget.config
-	Readme.md = Readme.md
-	version.json = version.json
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		appveyor.yml = appveyor.yml
+		build.ps1 = build.ps1
+		butters.png = butters.png
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		docs\index.md = docs\index.md
+		License.txt = License.txt
+		nuget.config = nuget.config
+		Readme.md = Readme.md
+		version.json = version.json
 	EndProjectSection
 EndProject
 Global

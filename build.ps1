@@ -18,7 +18,6 @@ Write-Host "  PullRequestNumber: $PullRequestNumber"
 Write-Host "  RunTests: $RunTests"
 Write-Host "  dotnet --version:" (dotnet --version)
 Write-Host "  PSScriptRoot: $PSScriptRoot"
-Write-Host "  CreatePackages: $CreatePackages"
 
 Write-Host "Building all projects (Build.csproj traversal)..." -ForegroundColor "Magenta"
 dotnet build ".\Build.csproj" -c Release /p:CI=true

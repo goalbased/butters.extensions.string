@@ -10,12 +10,10 @@ on:
       - "!/docs/*" # Don't run workflow when files are only in the /docs directory
 
 jobs:
-  vm-job:
-    name: Ubuntu
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: .NET Build
         run: dotnet build Build.csproj -c Release /p:CI=true
       - name: Tests

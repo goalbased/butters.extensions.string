@@ -1,26 +1,22 @@
-#TODO
-
 # Butters.Extensions.String - a string extension for .NET
 
 ## Overview
 
-A brief guide is available [on github](https://github.com/DapperLib/Dapper/blob/main/Readme.md)
-
-Questions on Stack Overflow should be tagged [`dapper`](https://stackoverflow.com/questions/tagged/dapper)
+A brief guide is available [on github](https://github.com/goalbased/butters.extensions.string/blob/main/README.md)
 
 ## Installation
 
 From NuGet:
 
-    Install-Package Dapper
+    Install-Package Butters.Extensions.String
 
-or
+Link [on nuget](https://www.nuget.org/packages/Butters.Extensions.String)
 
-    Install-Package Dapper.StrongName
-
-Note: to get the latest pre-release build, add ` -Pre` to the end of the command.
+<!-- # Note: to get the latest pre-release build, add ` -Pre` to the end of the command. -->
 
 ## Release Notes
+
+Located at [dapperlib.github.io/Dapper](https://dapperlib.github.io/Dapper/)
 
 ### unreleased
 

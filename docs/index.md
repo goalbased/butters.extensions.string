@@ -1,9 +1,8 @@
-#TODO 
 # Butters.Extensions.String - a string extension for .NET
 
 ## Overview
 
-A brief guide is available [on github](https://github.com/DapperLib/Dapper/blob/main/Readme.md)
+A brief guide is available [on github](https://github.com/goalbased/butters.extensions.string/blob/main/README.md)
 
 Questions on Stack Overflow should be tagged [`dapper`](https://stackoverflow.com/questions/tagged/dapper)
 
@@ -19,7 +18,7 @@ or
 
 Note: to get the latest pre-release build, add ` -Pre` to the end of the command.
 
-## Release  Notes
+## Release Notes
 
 ### unreleased
 
@@ -84,8 +83,8 @@ Note: to get the latest pre-release build, add ` -Pre` to the end of the command
 Primary changes:
 
 - remove the System.Data.SqlClient dependency, allowing consumers to use System.Data.SqlClient or Microsoft.Data.SqlClient (or neither, or both) as they choose
- - this means that some users may need to *re-add* one of the above as a `<PackageReference>` for their project to build, if they were previously relying on Dapper to provide System.Data.SqlClient
- - the `AsTableValuedParameter(this IEnumerable<SqlDataRecord>)` extension method is now `AsTableValuedParameter<T>(this IEnumerable<T>) where T : IDataRecord`; this is a breaking change but should be code-compatible and just requires a rebuild
+- this means that some users may need to _re-add_ one of the above as a `<PackageReference>` for their project to build, if they were previously relying on Dapper to provide System.Data.SqlClient
+- the `AsTableValuedParameter(this IEnumerable<SqlDataRecord>)` extension method is now `AsTableValuedParameter<T>(this IEnumerable<T>) where T : IDataRecord`; this is a breaking change but should be code-compatible and just requires a rebuild
 - unify the target platform at NetStandard2.0 (and .NET Framework 4.6.2 for the EF DB geometry/geography types)
 - fix bug with `Identity` not enforcing type identity of multi-mapped types
 
@@ -165,7 +164,7 @@ Other changes merged:
 ### 1.50-beta8
 
 - Addition of `GetRowParser<T>` extension method on `IDataReader` API - allows manual construction of discriminated unions, etc
-- Addition of `Settings.PadListExpansions` - reduces query-plan saturation by padding list expansions with `null` values (opt-in, because on some DB configurations this could change the meaning) *(note: bad choice of `null` revised in 1.50-beta9)*
+- Addition of `Settings.PadListExpansions` - reduces query-plan saturation by padding list expansions with `null` values (opt-in, because on some DB configurations this could change the meaning) _(note: bad choice of `null` revised in 1.50-beta9)_
 - Addition of `Settings.ApplyNullValues` - assigns (rather than ignores) `null` values when possible
 - Fix for [#461](https://github.com/DapperLib/Dapper/issues/461) - ensure type-handlers work for constructor-based initialization
 - Fix for [#455](https://github.com/DapperLib/Dapper/issues/455) - make the `LookupDbType` method available again
@@ -217,7 +216,6 @@ Other changes merged:
 - provide `TypeMapProvider` with lazy func-based initialization (@garyhuntddn)
 - Core-clr updated to beta-8 and various cleanups/fixes
 - Built using core-clr build tools
-
 
 ### 1.42
 

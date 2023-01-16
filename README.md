@@ -1,306 +1,444 @@
-# Butters.Extensions.String - a string extension for .NET
+# Dapper - a simple object mapper for .Net
 
-## Overview
-
-A brief guide is available [on github](https://github.com/goalbased/butters.extensions.string/blob/main/README.md)
-
-## Installation
-
-From NuGet:
-
-    Install-Package Butters.Extensions.String
-
-Link [on nuget](https://www.nuget.org/packages/Butters.Extensions.String)
-
-<!-- # Note: to get the latest pre-release build, add ` -Pre` to the end of the command. -->
+[![Build status](https://ci.appveyor.com/api/projects/status/8rbgoxqio76ynj4h?svg=true)](https://ci.appveyor.com/project/StackExchange/dapper)
 
 ## Release Notes
 
 Located at [dapperlib.github.io/Dapper](https://dapperlib.github.io/Dapper/)
 
-### unreleased
+## Packages
 
-(note: new PRs will not be merged until they add release note wording here)
+MyGet Pre-release feed: https://www.myget.org/gallery/dapper
 
-### 2.0.123
+| Package                                                                                                | NuGet Stable                                                                                                                                                                    | NuGet Pre-release                                                                                                                                                                  | Downloads                                                                                                                                                                        | MyGet                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Dapper](https://www.nuget.org/packages/Dapper/)                                                       | [![Dapper](https://img.shields.io/nuget/v/Dapper.svg)](https://www.nuget.org/packages/Dapper/)                                                                                  | [![Dapper](https://img.shields.io/nuget/vpre/Dapper.svg)](https://www.nuget.org/packages/Dapper/)                                                                                  | [![Dapper](https://img.shields.io/nuget/dt/Dapper.svg)](https://www.nuget.org/packages/Dapper/)                                                                                  | [![Dapper MyGet](https://img.shields.io/myget/dapper/vpre/Dapper.svg)](https://www.myget.org/feed/dapper/package/nuget/Dapper)                                                                                  |
+| [Dapper.EntityFramework](https://www.nuget.org/packages/Dapper.EntityFramework/)                       | [![Dapper.EntityFramework](https://img.shields.io/nuget/v/Dapper.EntityFramework.svg)](https://www.nuget.org/packages/Dapper.EntityFramework/)                                  | [![Dapper.EntityFramework](https://img.shields.io/nuget/vpre/Dapper.EntityFramework.svg)](https://www.nuget.org/packages/Dapper.EntityFramework/)                                  | [![Dapper.EntityFramework](https://img.shields.io/nuget/dt/Dapper.EntityFramework.svg)](https://www.nuget.org/packages/Dapper.EntityFramework/)                                  | [![Dapper.EntityFramework MyGet](https://img.shields.io/myget/dapper/vpre/Dapper.EntityFramework.svg)](https://www.myget.org/feed/dapper/package/nuget/Dapper.EntityFramework)                                  |
+| [Dapper.EntityFramework.StrongName](https://www.nuget.org/packages/Dapper.EntityFramework.StrongName/) | [![Dapper.EntityFramework.StrongName](https://img.shields.io/nuget/v/Dapper.EntityFramework.StrongName.svg)](https://www.nuget.org/packages/Dapper.EntityFramework.StrongName/) | [![Dapper.EntityFramework.StrongName](https://img.shields.io/nuget/vpre/Dapper.EntityFramework.StrongName.svg)](https://www.nuget.org/packages/Dapper.EntityFramework.StrongName/) | [![Dapper.EntityFramework.StrongName](https://img.shields.io/nuget/dt/Dapper.EntityFramework.StrongName.svg)](https://www.nuget.org/packages/Dapper.EntityFramework.StrongName/) | [![Dapper.EntityFramework.StrongName MyGet](https://img.shields.io/myget/dapper/vpre/Dapper.EntityFramework.StrongName.svg)](https://www.myget.org/feed/dapper/package/nuget/Dapper.EntityFramework.StrongName) |
+| [Dapper.Rainbow](https://www.nuget.org/packages/Dapper.Rainbow/)                                       | [![Dapper.Rainbow](https://img.shields.io/nuget/v/Dapper.Rainbow.svg)](https://www.nuget.org/packages/Dapper.Rainbow/)                                                          | [![Dapper.Rainbow](https://img.shields.io/nuget/vpre/Dapper.Rainbow.svg)](https://www.nuget.org/packages/Dapper.Rainbow/)                                                          | [![Dapper.Rainbow](https://img.shields.io/nuget/dt/Dapper.Rainbow.svg)](https://www.nuget.org/packages/Dapper.Rainbow/)                                                          | [![Dapper.Rainbow MyGet](https://img.shields.io/myget/dapper/vpre/Dapper.Rainbow.svg)](https://www.myget.org/feed/dapper/package/nuget/Dapper.Rainbow)                                                          |
+| [Dapper.SqlBuilder](https://www.nuget.org/packages/Dapper.SqlBuilder/)                                 | [![Dapper.SqlBuilder](https://img.shields.io/nuget/v/Dapper.SqlBuilder.svg)](https://www.nuget.org/packages/Dapper.SqlBuilder/)                                                 | [![Dapper.SqlBuilder](https://img.shields.io/nuget/vpre/Dapper.SqlBuilder.svg)](https://www.nuget.org/packages/Dapper.SqlBuilder/)                                                 | [![Dapper.SqlBuilder](https://img.shields.io/nuget/dt/Dapper.SqlBuilder.svg)](https://www.nuget.org/packages/Dapper.SqlBuilder/)                                                 | [![Dapper.SqlBuilder MyGet](https://img.shields.io/myget/dapper/vpre/Dapper.SqlBuilder.svg)](https://www.myget.org/feed/dapper/package/nuget/Dapper.SqlBuilder)                                                 |
+| [Dapper.StrongName](https://www.nuget.org/packages/Dapper.StrongName/)                                 | [![Dapper.StrongName](https://img.shields.io/nuget/v/Dapper.StrongName.svg)](https://www.nuget.org/packages/Dapper.StrongName/)                                                 | [![Dapper.StrongName](https://img.shields.io/nuget/vpre/Dapper.StrongName.svg)](https://www.nuget.org/packages/Dapper.StrongName/)                                                 | [![Dapper.StrongName](https://img.shields.io/nuget/dt/Dapper.StrongName.svg)](https://www.nuget.org/packages/Dapper.StrongName/)                                                 | [![Dapper.StrongName MyGet](https://img.shields.io/myget/dapper/vpre/Dapper.StrongName.svg)](https://www.myget.org/feed/dapper/package/nuget/Dapper.StrongName)                                                 |
 
-- Parameters can now be re-used on subsequent commands (#952 via jamescrowley)
-- Array query support (`.Query<int[]>`) on supported platforms (e.g. Postgres) (#1598 via DarkWanderer)
-- `SqlMapper.HasTypeHandler` is made public for consumers (#1405 via brendangooden)
-- Improves multi-mapping error message when a specified column in splitOn can't be found (#1664 via NickCraver)
-- Improves `DbString.ToString()` (#1665 via NickCraver)
-- `DbType` for date/time types is no longer explicitly specified (resolves `Npgsql` v6 issue)
-- add `Settings.UseIncrementalPseudoPositionalParameterNames`, to support "snowflake" parameter naming conventions
+Package Purposes:
 
-### 2.0.90
+- Dapper.EntityFramework
+  - Extension handlers for EntityFramework
+- Dapper.EntityFramework.StrongName
+  - Extension handlers for EntityFramework
+- Dapper.Rainbow
+  - Micro-ORM implemented on Dapper, provides CRUD helpers
+- Dapper.SqlBuilder
+  - Component for building SQL queries dynamically and composably
+- Dapper.StrongName
+  - High-performance micro-ORM supporting MySQL, Sqlite, SqlICE, and Firebird
 
-- logo added; license updated to mention logo usage (via mgravell)
-- moved to DapperLib org; links updated (#1656)
-- RepoDb benchmark added (#1626 via stevedesmond-ca)
-- excise unrelated Soma tests (#1642 via kant2002)
-- SqlMarshl benchmark added (#1646 via kant2002)
-- documentation fixes (#1615 via Rollerss, #1604 via GitHubPang)
+## Features
 
-### 2.0.78
+Dapper is a [NuGet library](https://www.nuget.org/packages/Dapper) that you can add in to your project that will extend your `IDbConnection` interface.
 
-- fix `DynamicParameters` loop bug - wrong index (#1443 via DamirAinullin)
-- fix nullable tuple handling (#1400 via JulianRooze)
-- support update set in `SqlBuilder` (#1404 via Wei)
-- initialize collections with counts when possible (#1449 via DamirAinullin)
-- general code cleanup (#1452, #1457, #1458, #1459 all via DamirAinullin)
-- C# 9 and .NET 5 preparation/cleanup (#1572 via mgravell)
-- GitHub action, Docker, AppVeyor work (build/test) work (#1563 via Tyrrrz, #1559 via craver, #1450 via craver)
-- Test project rationalization (#1556 via craver)
-- ClickHouse detection (#1462 via DarkWanderer)
-- Switched to "main" branch (via craver)
-- documentation fixed (#1596 via royal, #1560 via wswind, #1558 via paul42, #1507 via imba-tjd, #1508 via dogac00, 899c9feb via BlackjacketMack, 0b17133 via BlackjacketMack, 9b6c8c7d via bryancrosby, #1202 via craver)
-- MightyOrm benchmark added (455b3f3b via cdonnellytx)
-- EF6 performance test updates (#1361 via AlexBagnolini)
+It provides 3 helpers:
 
-### 2.0.35
+## Execute a query and map the results to a strongly typed List
 
-- build tooling: enable "deterministic builds" and enable SDK roll-foward
-- fix culture related formatting/parsing issue with Sqlite (#1363 via sebastienros)
-- documentation fixes (#1357 via jawn)
-- add tests for `SqlBuilder` (#1369 via shps951023)
+```csharp
+public static IEnumerable<T> Query<T>(this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, CommandType? commandType = null)
+```
 
-### 2.0.30
+Example usage:
 
-- upstream library updates; project (build) cleanup
-- reinstated net461 build target
-- add Dapper.ProviderTools library (to help with System vs Microsoft SqlClient migration, etc)
-- fix double dictionary lookup (#1339 via DamirAinullin)
-- fix bug with dynamic parameters accessing the wrong member (#1334 via DamirAinullin)
-- fix explicit-key issue with `DeleteAsync` (#1309 via james-hester-ah)
-- fix for `char` on Postgres (#1326 via jjonescz)
-- documentation fixes (#1340 via jawn)
-- test and benchmark fixes (#1337 via DamirAinullin, #1206 via yesmey, #1331 via andresrsanchez, #1335 via DamirAinullin)
+```csharp
+public class Dog
+{
+    public int? Age { get; set; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public float? Weight { get; set; }
 
-### 2.0.4
+    public int IgnoredProperty { get { return 1; } }
+}
 
-Primary changes:
+var guid = Guid.NewGuid();
+var dog = connection.Query<Dog>("select Age = @Age, Id = @Id", new { Age = (int?)null, Id = guid });
 
-- remove the System.Data.SqlClient dependency, allowing consumers to use System.Data.SqlClient or Microsoft.Data.SqlClient (or neither, or both) as they choose
-- this means that some users may need to _re-add_ one of the above as a `<PackageReference>` for their project to build, if they were previously relying on Dapper to provide System.Data.SqlClient
-- the `AsTableValuedParameter(this IEnumerable<SqlDataRecord>)` extension method is now `AsTableValuedParameter<T>(this IEnumerable<T>) where T : IDataRecord`; this is a breaking change but should be code-compatible and just requires a rebuild
-- unify the target platform at NetStandard2.0 (and .NET Framework 4.6.2 for the EF DB geometry/geography types)
-- fix bug with `Identity` not enforcing type identity of multi-mapped types
+Assert.Equal(1,dog.Count());
+Assert.Null(dog.First().Age);
+Assert.Equal(guid, dog.First().Id);
+```
 
-Other changes merged:
+## Execute a query and map it to a list of dynamic objects
 
-- fix #1242, #1280, #1282 - fix value-tuple mapping
-- fix #1295 - add `ExecuteReaderAsync` overload to expose `DbDataReader`
-- fix #569 - handing of `IN` and similar clauses in some scenarios
-- fix #1256 - make `Dispose()` polymorphic in "rainbow"
-- fix #1257 - make the `.Connection` available in "rainbow"
+```csharp
+public static IEnumerable<dynamic> Query (this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, CommandType? commandType = null)
+```
+
+This method will execute SQL and return a dynamic list.
+
+Example usage:
+
+```csharp
+var rows = connection.Query("select 1 A, 2 B union all select 3, 4").AsList();
+
+Assert.Equal(1, (int)rows[0].A);
+Assert.Equal(2, (int)rows[0].B);
+Assert.Equal(3, (int)rows[1].A);
+Assert.Equal(4, (int)rows[1].B);
+```
+
+## Execute a Command that returns no results
+
+```csharp
+public static int Execute(this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
+```
+
+Example usage:
+
+```csharp
+var count = connection.Execute(@"
+  set nocount on
+  create table #t(i int)
+  set nocount off
+  insert #t
+  select @a a union all select @b
+  set nocount on
+  drop table #t", new {a=1, b=2 });
+Assert.Equal(2, count);
+```
+
+## Execute a Command multiple times
+
+The same signature also allows you to conveniently and efficiently execute a command multiple times (for example to bulk-load data)
+
+Example usage:
+
+```csharp
+var count = connection.Execute(@"insert MyTable(colA, colB) values (@a, @b)",
+    new[] { new { a=1, b=1 }, new { a=2, b=2 }, new { a=3, b=3 } }
+  );
+Assert.Equal(3, count); // 3 rows inserted: "1,1", "2,2" and "3,3"
+```
+
+Another example usage when you _already_ have an existing collection:
+
+```csharp
+var foos = new List<Foo>
+{
+    { new Foo { A = 1, B = 1 } }
+    { new Foo { A = 2, B = 2 } }
+    { new Foo { A = 3, B = 3 } }
+};
+
+var count = connection.Execute(@"insert MyTable(colA, colB) values (@a, @b)", foos);
+Assert.Equal(foos.Count, count);
+```
+
+This works for any parameter that implements `IEnumerable<T>` for some T.
+
+## Performance
+
+A key feature of Dapper is performance. The following metrics show how long it takes to execute a `SELECT` statement against a DB (in various config, each labeled) and map the data returned to objects.
+
+The benchmarks can be found in [Dapper.Tests.Performance](https://github.com/DapperLib/Dapper/tree/main/benchmarks/Dapper.Tests.Performance) (contributions welcome!) and can be run via:
+
+```bash
+dotnet run --project .\benchmarks\Dapper.Tests.Performance\ -c Release -f netcoreapp3.1 -- -f * --join
+```
+
+Output from the latest run is:
+
+```ini
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19041.208 (2004/?/20H1)
+Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=3.1.201
+  [Host]   : .NET Core 3.1.3 (CoreCLR 4.700.20.11803, CoreFX 4.700.20.12001), X64 RyuJIT
+  ShortRun : .NET Core 3.1.3 (CoreCLR 4.700.20.11803, CoreFX 4.700.20.12001), X64 RyuJIT
+
+```
+
+| ORM            | Method                                      | Return  |      Mean |    StdDev |     Error |   Gen 0 |  Gen 1 |  Gen 2 | Allocated |
+| -------------- | ------------------------------------------- | ------- | --------: | --------: | --------: | ------: | -----: | -----: | --------: |
+| Belgrade       | ExecuteReader                               | Post    |  94.46 μs |  8.115 μs | 12.268 μs |  1.7500 | 0.5000 |      - |   8.42 KB |
+| Hand Coded     | DataTable                                   | dynamic | 105.43 μs |  0.998 μs |  1.508 μs |  3.0000 |      - |      - |   9.37 KB |
+| Hand Coded     | SqlCommand                                  | Post    | 106.58 μs |  1.191 μs |  1.801 μs |  1.5000 | 0.7500 | 0.1250 |   7.42 KB |
+| Dapper         | QueryFirstOrDefault&lt;dynamic&gt;          | dynamic | 119.52 μs |  1.320 μs |  2.219 μs |  3.6250 |      - |      - |  11.39 KB |
+| Dapper         | &#39;Query&lt;dynamic&gt; (buffered)&#39;   | dynamic | 119.93 μs |  1.943 μs |  2.937 μs |  2.3750 | 1.0000 | 0.2500 |  11.73 KB |
+| Massive        | &#39;Query (dynamic)&#39;                   | dynamic | 120.31 μs |  1.340 μs |  2.252 μs |  2.2500 | 1.0000 | 0.1250 |  12.07 KB |
+| Dapper         | QueryFirstOrDefault&lt;T&gt;                | Post    | 121.57 μs |  1.564 μs |  2.364 μs |  1.7500 | 0.7500 |      - |  11.35 KB |
+| Dapper         | &#39;Query&lt;T&gt; (buffered)&#39;         | Post    | 121.67 μs |  2.913 μs |  4.403 μs |  1.8750 | 0.8750 |      - |  11.65 KB |
+| PetaPoco       | &#39;Fetch&lt;T&gt; (Fast)&#39;             | Post    | 124.91 μs |  4.015 μs |  6.747 μs |  2.0000 | 1.0000 |      - |   11.5 KB |
+| Mighty         | Query&lt;T&gt;                              | Post    | 125.23 μs |  2.932 μs |  4.433 μs |  2.2500 | 1.0000 |      - |   12.6 KB |
+| LINQ to DB     | Query&lt;T&gt;                              | Post    | 125.76 μs |  2.038 μs |  3.081 μs |  2.2500 | 0.7500 | 0.2500 |  10.62 KB |
+| PetaPoco       | Fetch&lt;T&gt;                              | Post    | 127.48 μs |  4.283 μs |  6.475 μs |  2.0000 | 1.0000 |      - |  12.18 KB |
+| LINQ to DB     | &#39;First (Compiled)&#39;                  | Post    | 128.89 μs |  2.627 μs |  3.971 μs |  2.5000 | 0.7500 |      - |  10.92 KB |
+| Mighty         | Query&lt;dynamic&gt;                        | dynamic | 129.20 μs |  2.577 μs |  3.896 μs |  2.0000 | 1.0000 |      - |  12.43 KB |
+| Mighty         | SingleFromQuery&lt;T&gt;                    | Post    | 129.41 μs |  2.094 μs |  3.166 μs |  2.2500 | 1.0000 |      - |   12.6 KB |
+| Mighty         | SingleFromQuery&lt;dynamic&gt;              | dynamic | 130.59 μs |  2.432 μs |  3.677 μs |  2.0000 | 1.0000 |      - |  12.43 KB |
+| Dapper         | &#39;Contrib Get&lt;T&gt;&#39;              | Post    | 134.74 μs |  1.816 μs |  2.746 μs |  2.5000 | 1.0000 | 0.2500 |  12.29 KB |
+| ServiceStack   | SingleById&lt;T&gt;                         | Post    | 135.01 μs |  1.213 μs |  2.320 μs |  3.0000 | 1.0000 | 0.2500 |  15.27 KB |
+| LINQ to DB     | First                                       | Post    | 151.87 μs |  3.826 μs |  5.784 μs |  3.0000 | 1.0000 | 0.2500 |  13.97 KB |
+| EF 6           | SqlQuery                                    | Post    | 171.00 μs |  1.460 μs |  2.791 μs |  3.7500 | 1.0000 |      - |  23.67 KB |
+| DevExpress.XPO | GetObjectByKey&lt;T&gt;                     | Post    | 172.36 μs |  3.758 μs |  5.681 μs |  5.5000 | 1.2500 |      - |  29.06 KB |
+| Dapper         | &#39;Query&lt;T&gt; (unbuffered)&#39;       | Post    | 174.40 μs |  3.296 μs |  4.983 μs |  2.0000 | 1.0000 |      - |  11.77 KB |
+| Dapper         | &#39;Query&lt;dynamic&gt; (unbuffered)&#39; | dynamic | 174.45 μs |  1.988 μs |  3.340 μs |  2.0000 | 1.0000 |      - |  11.81 KB |
+| DevExpress.XPO | FindObject&lt;T&gt;                         | Post    | 181.76 μs |  5.554 μs |  9.333 μs |  8.0000 |      - |      - |  27.15 KB |
+| DevExpress.XPO | Query&lt;T&gt;                              | Post    | 189.81 μs |  4.187 μs |  8.004 μs | 10.0000 |      - |      - |  31.61 KB |
+| EF Core        | &#39;First (Compiled)&#39;                  | Post    | 199.72 μs |  3.983 μs |  7.616 μs |  4.5000 |      - |      - |   13.8 KB |
+| NHibernate     | Get&lt;T&gt;                                | Post    | 248.71 μs |  6.604 μs | 11.098 μs |  5.0000 | 1.0000 |      - |  29.79 KB |
+| EF Core        | First                                       | Post    | 253.20 μs |  3.033 μs |  5.097 μs |  5.5000 |      - |      - |   17.7 KB |
+| NHibernate     | HQL                                         | Post    | 258.70 μs | 11.716 μs | 17.712 μs |  5.0000 | 1.0000 |      - |   32.1 KB |
+| EF Core        | SqlQuery                                    | Post    | 268.89 μs | 19.349 μs | 32.516 μs |  6.0000 |      - |      - |   18.5 KB |
+| EF 6           | First                                       | Post    | 278.46 μs | 12.094 μs | 18.284 μs | 13.5000 |      - |      - |  44.18 KB |
+| EF Core        | &#39;First (No Tracking)&#39;               | Post    | 280.88 μs |  8.192 μs | 13.765 μs |  3.0000 | 0.5000 |      - |  19.38 KB |
+| NHibernate     | Criteria                                    | Post    | 304.90 μs |  2.232 μs |  4.267 μs | 11.0000 | 1.0000 |      - |  60.29 KB |
+| EF 6           | &#39;First (No Tracking)&#39;               | Post    | 316.55 μs |  7.667 μs | 11.592 μs |  8.5000 | 1.0000 |      - |  50.95 KB |
+| NHibernate     | SQL                                         | Post    | 335.41 μs |  3.111 μs |  4.703 μs | 19.0000 | 1.0000 |      - |  78.86 KB |
+| NHibernate     | LINQ                                        | Post    | 807.79 μs | 27.207 μs | 45.719 μs |  8.0000 | 2.0000 |      - |  53.65 KB |
+
+Feel free to submit patches that include other ORMs - when running benchmarks, be sure to compile in Release and not attach a debugger (<kbd>Ctrl</kbd>+<kbd>F5</kbd>).
 
-### 1.60.6
+Alternatively, you might prefer Frans Bouma's [RawDataAccessBencher](https://github.com/FransBouma/RawDataAccessBencher) test suite or [OrmBenchmark](https://github.com/InfoTechBridge/OrmBenchmark).
 
-- improve performance of descriptor API
+## Parameterized queries
 
-### 1.60.5
+Parameters are usually passed in as anonymous classes. This allows you to name your parameters easily and gives you the ability to simply cut-and-paste SQL snippets and run them in your db platform's Query analyzer.
 
-- add descriptor API to `DapperRow` (enables UI binding with non-generic `Query()` API)
+```csharp
+new {A = 1, B = "b"} // A will be mapped to the param @A, B to the param @B
+```
 
-### 1.60.1
+Parameters can also be built up dynamically using the DynamicParameters class. This allows for building a dynamic SQL statement while still using parameters for safety and performance.
 
-- Fix [#1196](https://github.com/DapperLib/Dapper/issues/1196) - versioning fix only ([#1198](https://github.com/DapperLib/Dapper/pull/1198)) - assembly version is now locked at 1.60.0 to resolve some mismatch issues with .NET Core assembly loading/binding.
+```csharp
+    var sqlPredicates = new List<string>();
+    var queryParams = new DynamicParameters();
+    if (boolExpression)
+    {
+        sqlPredicates.Add("column1 = @param1");
+        queryParams.Add("param1", dynamicValue1, System.Data.DbType.Guid);
+    } else {
+        sqlPredicates.Add("column2 = @param2");
+        queryParams.Add("param2", dynamicValue2, System.Data.DbType.String);
+    }
+```
 
-### 1.50.7
+DynamicParameters also supports copying multiple parameters from existing objects of different types.
 
-- Fix [#1190](https://github.com/DapperLib/Dapper/issues/1190) - incorrect unmanaged pointer when processing parameters that are a boxed struct (rare error relating to GC)
-- Fix [#1111](https://github.com/DapperLib/Dapper/issues/1111) - make `SqlMapper.Parse` consistent with `QueryImpl`
-- Fix #111- - improve error message for invalid literal types
-- Fix [#1149](https://github.com/DapperLib/Dapper/pull/1149) - improve error messages in "contrib"
-- Improved detection of empty table-valued-parameters
+```csharp
+    var queryParams = new DynamicParameters(objectOfType1);
+    queryParams.AddDynamicParams(objectOfType2);
+```
 
-### 1.50.5
+When an object that implements the `IDynamicParameters` interface passed into `Execute` or `Query` functions, parameter values will be extracted via this interface. Obviously, the most likely object class to use for this purpose would be the built-in `DynamicParameters` class.
 
-- Fixes empty result set hanging with `QueryAsync`
-- `DapperRow` now implements `IReadOnlyDictionary<string, object>`
-- Improved error messages for `Async` when the provided `IDbConnection` is not a `DbConnection`
-- Contrib: `GetAll` now handles nullable types
+## List Support
 
-### 1.50.4
+Dapper allows you to pass in `IEnumerable<int>` and will automatically parameterize your query.
 
-- Added back missing .NET Standard functionality (restored in `netstandard2.0`)
-- Bumped `SqlClient` dependency to 4.4.0 (to help propagate the newer client)
+For example:
 
-### 1.50.2
+```csharp
+connection.Query<int>("select * from (select 1 as Id union all select 2 union all select 3) as X where Id in @Ids", new { Ids = new int[] { 1, 2, 3 } });
+```
 
-- Fix issue [#569](https://github.com/DapperLib/Dapper/issues/569) (`in` expansions using ODBC pseudo-positional arguments)
+Will be translated to:
+
+```csharp
+select * from (select 1 as Id union all select 2 union all select 3) as X where Id in (@Ids1, @Ids2, @Ids3)" // @Ids1 = 1 , @Ids2 = 2 , @Ids2 = 3
+```
 
-### 1.50.1
+## Literal replacements
 
-- Change to how `string_split` is used for `InListStringSplitCount`
+Dapper supports literal replacements for bool and numeric types.
 
-### 1.50.0
+```csharp
+connection.Query("select * from User where UserTypeId = {=Admin}", new { UserTypeId.Admin });
+```
 
-- No changes; stable release
+The literal replacement is not sent as a parameter; this allows better plans and filtered index usage but should usually be used sparingly and after testing. This feature is particularly useful when the value being injected
+is actually a fixed value (for example, a fixed "category id", "status code" or "region" that is specific to the query). For _live_ data where you are considering literals, you might _also_ want to consider and test provider-specific query hints like [`OPTIMIZE FOR UNKNOWN`](https://blogs.msdn.microsoft.com/sqlprogrammability/2008/11/26/optimize-for-unknown-a-little-known-sql-server-2008-feature/) with regular parameters.
 
-### 1.50.0-rc3
+## Buffered vs Unbuffered readers
 
-- Updated for .Net Core RTM package dependencies
+Dapper's default behavior is to execute your SQL and buffer the entire reader on return. This is ideal in most cases as it minimizes shared locks in the db and cuts down on db network time.
 
-### 1.50.0-rc2b
+However when executing huge queries you may need to minimize memory footprint and only load objects as needed. To do so pass, `buffered: false` into the `Query` method.
 
-- New `InListStringSplitCount` global setting; if set (non-negative), `in @foo` expansions (of at least the specified size) of primitive types (`int`, `tinyint`, `smallint`, `bigint`) are implemented via the SQL Server 2016 (compat level 130) `STRING_SPLIT` function
-- Fix for incorrect conversions in `GridReader` ([#254](https://github.com/DapperLib/Dapper/issues/254))
+## Multi Mapping
 
-### 1.50.0-rc2 / 1.50.0-rc2a
+Dapper allows you to map a single row to multiple objects. This is a key feature if you want to avoid extraneous querying and eager load associations.
 
-- Packaging for .NET Core rc2
+Example:
 
-### 1.50-beta9
+Consider 2 classes: `Post` and `User`
 
-- Fix for `PadListExpansions` to work correctly with `not in` scenarios; now uses last non-null value instead of `null`; if none available, don't pad
-- Fix problems with single-result/single-row not being supported by all providers (basically: sqlite, [#466](https://github.com/DapperLib/Dapper/issues/466))
-- Fix problems with enums - nulls ([#467](https://github.com/DapperLib/Dapper/issues/467)) and primitive values ([#468](https://github.com/DapperLib/Dapper/issues/468))
-- Add support for C# 6 get-only properties ([#473](https://github.com/DapperLib/Dapper/issues/473))
-- Add support for various xml types ([#427](https://github.com/DapperLib/Dapper/issues/427))
+```csharp
+class Post
+{
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public User Owner { get; set; }
+}
 
-### 1.50-beta8
+class User
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+```
 
-- Addition of `GetRowParser<T>` extension method on `IDataReader` API - allows manual construction of discriminated unions, etc
-- Addition of `Settings.PadListExpansions` - reduces query-plan saturation by padding list expansions with `null` values (opt-in, because on some DB configurations this could change the meaning) _(note: bad choice of `null` revised in 1.50-beta9)_
-- Addition of `Settings.ApplyNullValues` - assigns (rather than ignores) `null` values when possible
-- Fix for [#461](https://github.com/DapperLib/Dapper/issues/461) - ensure type-handlers work for constructor-based initialization
-- Fix for [#455](https://github.com/DapperLib/Dapper/issues/455) - make the `LookupDbType` method available again
+Now let us say that we want to map a query that joins both the posts and the users table. Until now if we needed to combine the result of 2 queries, we'd need a new object to express it but it makes more sense in this case to put the `User` object inside the `Post` object.
 
-### 1.50-beta7
+This is the use case for multi mapping. You tell dapper that the query returns a `Post` and a `User` object and then give it a function describing what you want to do with each of the rows containing both a `Post` and a `User` object. In our case, we want to take the user object and put it inside the post object. So we write the function:
 
-- Addition of `GetRowParser(Type)` (and refactor the backing store for readers to suit)
-- Column hash should consider type, not just name
+```csharp
+(post, user) => { post.Owner = user; return post; }
+```
 
-### 1.50-beta6
+The 3 type arguments to the `Query` method specify what objects dapper should use to deserialize the row and what is going to be returned. We're going to interpret both rows as a combination of `Post` and `User` and we're returning back a `Post` object. Hence the type declaration becomes
 
-- Fix for issue [#424](https://github.com/DapperLib/Dapper/issues/424) - defensive `SqlDataRecord` handling
+```csharp
+<Post, User, Post>
+```
 
-### 1.50-beta5
+Everything put together, looks like this:
 
-- Add "single", "first", "single or default" to complement the "first or default" options from 1.50-beta4
-- Use single-row/single-result when possible
-- Fix for proxy-generator (issue #361)
+```csharp
+var sql =
+@"select * from #Posts p
+left join #Users u on u.Id = p.OwnerId
+Order by p.Id";
+
+var data = connection.Query<Post, User, Post>(sql, (post, user) => { post.Owner = user; return post;});
+var post = data.First();
+
+Assert.Equal("Sams Post1", post.Content);
+Assert.Equal(1, post.Id);
+Assert.Equal("Sam", post.Owner.Name);
+Assert.Equal(99, post.Owner.Id);
+```
+
+Dapper is able to split the returned row by making an assumption that your Id columns are named `Id` or `id`. If your primary key is different or you would like to split the row at a point other than `Id`, use the optional `splitOn` parameter.
+
+## Multiple Results
+
+Dapper allows you to process multiple result grids in a single query.
 
-### 1.50-beta4
+Example:
 
-- Add `QueryFirstOrDefault` / `ReadFirstOrDefault` methods that optimize the single-row scenario
-- Remove some legacy `dynamic` usage from the async API
-- Make `DynamicTypeMap` public again (error during core-clr migration)
-- Use `Hashtable` again on core-clr
+```csharp
+var sql =
+@"
+select * from Customers where CustomerId = @id
+select * from Orders where CustomerId = @id
+select * from Returns where CustomerId = @id";
 
-### 1.50-beta3
+using (var multi = connection.QueryMultiple(sql, new {id=selectedId}))
+{
+   var customer = multi.Read<Customer>().Single();
+   var orders = multi.Read<Order>().ToList();
+   var returns = multi.Read<Return>().ToList();
+   ...
+}
+```
 
-- Core CLR support: add explicit `dnx451` support in addition to `dotnet5.4` (aka `netstandard1.4`)
+## Stored Procedures
 
-### 1.50-beta2
+Dapper fully supports stored procs:
 
-- Core CLR now targets rc1 / 23516
-- Various Core CLR fixes
-- Code cleanup and C# 6 usage (assorted)
+```csharp
+var user = cnn.Query<User>("spGetUser", new {Id = 1},
+        commandType: CommandType.StoredProcedure).SingleOrDefault();
+```
 
-### 1.50-beta1
+If you want something more fancy, you can do:
 
-- Split `SqlMapper.cs` as it was becoming too unmaintainable; NuGet is now the only supported deployment channel
-- Remove down-level C# requirements, as "drop in the file" is no longer the expected usage
-- `SqlMapper.Settings` added; provides high-level global configuration; initially `CommandTimeout` (@Irrational86)
-- improve error message if an array is used as a parameter in an invalid context
-- Add `Type[]` support for `GridReader.Read` scenarios (@NikolayGlynchak)
-- Support for custom type-maps in collection parameters (@gjsduarte)
-- Fix incorrect cast in `QueryAsync<T>` (@phnx47, [#346](https://github.com/DapperLib/Dapper/issues/346))
-- Fix incorrect null handling re `UdtTypeName` (@perliedman)
-- Support for `SqlDataRecord` (@sqmgh)
-- Allow `DbString` default for `IsAnsi` to be specified (@kppullin)
-- provide `TypeMapProvider` with lazy func-based initialization (@garyhuntddn)
-- Core-clr updated to beta-8 and various cleanups/fixes
-- Built using core-clr build tools
+```csharp
+var p = new DynamicParameters();
+p.Add("@a", 11);
+p.Add("@b", dbType: DbType.Int32, direction: ParameterDirection.Output);
+p.Add("@c", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
 
-### 1.42
+cnn.Execute("spMagicProc", p, commandType: CommandType.StoredProcedure);
 
-- Fix bug with dynamic parameters where `.Get<T>` is called before the command is executed
+int b = p.Get<int>("@b");
+int c = p.Get<int>("@c");
+```
 
-### 1.41-beta5
+## Ansi Strings and varchar
 
-- Core-clr packaging build and workarounds
-- Fix bug with literal `{=val}` boolean replacements
+Dapper supports varchar params, if you are executing a where clause on a varchar column using a param be sure to pass it in this way:
 
-### 1.41-beta4
+```csharp
+Query<Thing>("select * from Thing where Name = @Name", new {Name = new DbString { Value = "abcde", IsFixedLength = true, Length = 10, IsAnsi = true });
+```
 
-- Core-clr packaging build
-- Improve mapping to enum members (@BrianJolly)
+On SQL Server it is crucial to use the unicode when querying unicode and ANSI when querying non unicode.
 
-### 1.41-beta
+## Type Switching Per Row
 
-- Core-clr packaging build
+Usually you'll want to treat all rows from a given table as the same data type. However, there are some circumstances where it's useful to be able to parse different rows as different data types. This is where `IDataReader.GetRowParser` comes in handy.
 
-### 1.41-alpha
+Imagine you have a database table named "Shapes" with the columns: `Id`, `Type`, and `Data`, and you want to parse its rows into `Circle`, `Square`, or `Triangle` objects based on the value of the Type column.
 
-- Introduces dnx (core-clr) experimental changes
-- Adds `SqlBuilder` project
-- Improve error message when incorrectly accessing parameter values
+```csharp
+var shapes = new List<IShape>();
+using (var reader = connection.ExecuteReader("select * from Shapes"))
+{
+    // Generate a row parser for each type you expect.
+    // The generic type <IShape> is what the parser will return.
+    // The argument (typeof(*)) is the concrete type to parse.
+    var circleParser = reader.GetRowParser<IShape>(typeof(Circle));
+    var squareParser = reader.GetRowParser<IShape>(typeof(Square));
+    var triangleParser = reader.GetRowParser<IShape>(typeof(Triangle));
 
-### 1.40
+    var typeColumnIndex = reader.GetOrdinal("Type");
 
-- Workaround for broken `GetValues()` on Mono; add `AsList()`
+    while (reader.Read())
+    {
+        IShape shape;
+        var type = (ShapeType)reader.GetInt32(typeColumnIndex);
+        switch (type)
+        {
+            case ShapeType.Circle:
+            	shape = circleParser(reader);
+            	break;
+            case ShapeType.Square:
+            	shape = squareParser(reader);
+            	break;
+            case ShapeType.Triangle:
+            	shape = triangleParser(reader);
+            	break;
+            default:
+            	throw new NotImplementedException();
+        }
 
-### 1.39
+      	shapes.Add(shape);
+    }
+}
+```
 
-- Fix case on SQL CLR types; grid-reader should respect no-cache flags; make parameter inclusion case-insensitive
+## User Defined Variables in MySQL
 
-### 1.38
+In order to use Non-parameter SQL variables with MySql Connector, you have to add the following option to your connection string:
 
-- Specify constructor explicitly; allow value-type parameters (albeit: boxed)
+`Allow User Variables=True`
 
-### 1.37
+Make sure you don't provide Dapper with a property to map.
 
-- Reuse StringBuilder instances when possible (list parameters in particular)
+## Limitations and caveats
 
-### 1.36
+Dapper caches information about every query it runs, this allows it to materialize objects quickly and process parameters quickly. The current implementation caches this information in a `ConcurrentDictionary` object. Statements that are only used once are routinely flushed from this cache. Still, if you are generating SQL strings on the fly without using parameters it is possible you may hit memory issues.
 
-- Fix Issue [#192](https://github.com/DapperLib/Dapper/issues/192) (expanded parameter naming glitch) and Issue [#178](https://github.com/DapperLib/Dapper/issues/178) (execute reader now wraps the command/reader pair, to extend the command lifetime; note that the underlying command/reader are available by casting to `IWrappedDataReader`)
+Dapper's simplicity means that many feature that ORMs ship with are stripped out. It worries about the 95% scenario, and gives you the tools you need most of the time. It doesn't attempt to solve every problem.
 
-### 1.35
+## Will Dapper work with my DB provider?
 
-- Fix Issue [#151](https://github.com/DapperLib/Dapper/issues/151) (Execute should work with `ExpandoObject` etc); Fix Issue #182 (better support for db-type when using `object` values);
-- Output expressions / callbacks in dynamic args (via Derek); arbitrary number of types in multi-mapping (via James Holwell);
-- Fix `DbString`/Oracle bug (via Mauro Cerutti); new support for **named positional arguments**
+Dapper has no DB specific implementation details, it works across all .NET ADO providers including [SQLite](https://www.sqlite.org/), SQL CE, Firebird, Oracle, MySQL, PostgreSQL and SQL Server.
 
-### 1.34
+## Do you have a comprehensive list of examples?
 
-- Support for `SqlHierarchyId` (core)
+Dapper has a comprehensive test suite in the [test project](https://github.com/DapperLib/Dapper/tree/main/tests/Dapper.Tests).
 
-### 1.33
+## Who is using this?
 
-- Support for `SqlGeometry` (core) and `DbGeometry` (EF)
-
-### 1.32
-
-- Support for `SqlGeography` in core library
-
-### 1.31
-
-- Fix issue with error message when there is a column/type mismatch
-
-### 1.30
-
-- Better async cancellation
-
-### 1.29
-
-- Make underscore name matching optional (opt-in) - this can be a breaking change for some people
-
-### 1.28
-
-- Much better numeric type conversion; fix for large oracle strings; map `Foo_Bar` to `FooBar` (etc); `ExecuteScalar` added; stability fixes
-
-### 1.27
-
-- Fixes for type-handler parse; ensure type-handlers get last dibs on configuring parameters
-
-### 1.26
-
-- New type handler API for extension support
-
-### 1.25
-
-- Command recycling and disposing during pipelined async multi-exec; enable pipeline (via sync-over-async) for sync API"
+Dapper is in production use at [Stack Overflow](https://stackoverflow.com/).

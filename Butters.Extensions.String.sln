@@ -11,11 +11,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E88D7C07
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Butters.Extensions.String.Tests", "Butters.Extensions.String.Tests\Butters.Extensions.String.Tests.csproj", "{A4EC91AA-F8FA-47E8-9075-797766D9B58A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCB923FC-092A-4B53-A87C-695EF4041473}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{EFDCF303-EA0E-44B9-B71C-F00F12DDA7FB}"
 	ProjectSection(SolutionItems) = preProject
 		docs\index.md = docs\index.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45462358-EEA0-4261-B3F2-EE43EB8BB170}"
+ProjectSection(SolutionItems) = preProject
+	.editorconfig = .editorconfig
+	appveyor.yml = appveyor.yml
+	build.ps1 = build.ps1
+	Dapper.png = Dapper.png
+	Directory.Build.props = Directory.Build.props
+	global.json = global.json
+	docs\index.md = docs\index.md
+	License.txt = License.txt
+	nuget.config = nuget.config
+	Readme.md = Readme.md
+	version.json = version.json
 	EndProjectSection
 EndProject
 Global

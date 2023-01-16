@@ -15,10 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: .NET Build
         run: dotnet build Build.csproj -c Release /p:CI=true
       - name: Butters.Extensions.String Tests
         run: dotnet test tests/Butters.Extensions.String.Tests/Butters.Extensions.String.Tests.csproj -c Release --logger trx --results-directory "TestResults" /p:CI=true
-      - name: .NET Lib Pack
-        run: dotnet pack Build.csproj --no-build -c Release /p:PackageOutputPath=%CD%\.nupkgs /p:CI=true

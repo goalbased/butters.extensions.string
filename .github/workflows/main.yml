@@ -19,4 +19,4 @@ jobs:
       - name: .NET Build
         run: dotnet build Build.csproj -c Release /p:CI=true
       - name: Butters.Extensions.String Tests
-        run: dotnet test tests/Butters.Extensions.String.Tests/Butters.Extensions.String.Tests.csproj -c Release --logger trx --results-directory "TestResults" /p:CI=true
+        run: dotnet test tests/Butters.Extensions.String.Tests/Butters.Extensions.String.Tests.csproj -c Release --logger trx --results-directory TestResults /p:CI=true

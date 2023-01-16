@@ -11,8 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Butters.Extensions.String")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Michael Mao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("2023 Butters")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("A high performance string extension")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Butters.Extensions.String")]

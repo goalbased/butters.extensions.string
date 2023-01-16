@@ -1,0 +1,24 @@
+name: Main Build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    paths:
+      - "*"
+      - "!/docs/*" # Don't run workflow when files are only in the /docs directory
+
+jobs:
+  vm-job:
+    name: Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: .NET Build
+        run: dotnet build Build.csproj -c Release /p:CI=true
+      - name: Butters.Extensions.String Tests
+        run: dotnet test tests/Butters.Extensions.String.Tests/Butters.Extensions.String.Tests.csproj -c Release --logger GitHubActions /p:CI=true
+      - name: .NET Lib Pack
+        run: dotnet pack Build.csproj --no-build -c Release /p:PackageOutputPath=%CD%\.nupkgs /p:CI=true

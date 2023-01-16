@@ -39,3 +39,11 @@ logs/
 
 # customer
 docker/
+
+#Copy from dapper
+TestResults/
+*.coverage
+.dotnet/*
+BenchmarkDotNet.Artifacts/
+.idea/
+.DS_Store

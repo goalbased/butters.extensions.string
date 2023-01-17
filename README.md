@@ -2,7 +2,7 @@
 
 <!--Try to remove appveyor [![Build status](https://ci.appveyor.com/api/projects/status/8xim58xuo7s59e61?svg=true)](https://ci.appveyor.com/project/goalbased/butters-extensions-string) -->
 
-[![Main Build](https://github.com/goalbased/butters.extensions.string/actions/workflows/main.yml/badge.svg)](https://github.com/goalbased/butters.extensions.string/actions/workflows/main.yml)
+[![Build](https://github.com/goalbased/butters.extensions.string/actions/workflows/main.yml/badge.svg)](https://github.com/goalbased/butters.extensions.string/actions/workflows/main.yml)
 [![codecov](https://codecov.io/github/goalbased/butters.extensions.string/branch/main/graph/badge.svg?token=J0EZ8CIGGQ)](https://codecov.io/github/goalbased/butters.extensions.string)
 
 ## Release Notes

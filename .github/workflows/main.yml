@@ -17,3 +17,7 @@ jobs:
         with:
           # directory: ./coverage/**/
           fail_ci_if_error: true
+      - name: Pack nugets
+        run: dotnet pack -c Release --no-build --output .
+      - name: Push to NuGet
+        run: dotnet nuget push "*.nupkg" --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json

@@ -1,3 +1,4 @@
+# Used in appveyor.yml.tmp
 [CmdletBinding(PositionalBinding=$false)]
 param(
     [bool] $CreatePackages,

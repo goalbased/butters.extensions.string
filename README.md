@@ -1,6 +1,7 @@
 # Butters.Extensions.String - a string extension for .NET
 
 [![Build status](https://ci.appveyor.com/api/projects/status/8xim58xuo7s59e61?svg=true)](https://ci.appveyor.com/project/goalbased/butters-extensions-string)
+[![codecov](https://codecov.io/github/goalbased/butters.extensions.string/branch/main/graph/badge.svg?token=J0EZ8CIGGQ)](https://codecov.io/github/goalbased/butters.extensions.string)
 
 ## Release Notes
 

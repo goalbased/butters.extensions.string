@@ -32,6 +32,13 @@ namespace Butters.Extensions.String.Tests
         [InlineData(false, "no")]
         public void ToBoolean(bool expected, string str) => Assert.Equal(expected, str.ToBoolean());
 
+
+        [Theory]
+        [InlineData("X")]
+        [InlineData("")]
+        public void ToBooleanException(string str) => Assert.Throws<ArgumentException>(() => str.ToBoolean());
+
+
         [Theory]
         [InlineData(1, "1")]
         [InlineData(short.MinValue, "-32768")]
@@ -158,6 +165,8 @@ namespace Butters.Extensions.String.Tests
         [InlineData("a", "A")]
         [InlineData("abc", "abc")]
         public void ToFirstCharLowerCase(string expected, string str) => Assert.Equal(expected, str.ToFirstCharLowerCase());
+
+        
     }
 
     public class TestModel

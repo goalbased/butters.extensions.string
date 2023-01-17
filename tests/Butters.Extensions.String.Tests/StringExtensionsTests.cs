@@ -86,6 +86,15 @@ namespace Butters.Extensions.String.Tests
         // https://codeblog.jonskeet.uk/2014/08/22/when-is-a-constant-not-a-constant-when-its-a-decimal/        
         public void ToDecimal(decimal expected, string str) => Assert.Equal(expected, str.ToDecimal());
 
+        [Fact]
+        public void ToDateTime()
+        {
+            var expected = new DateTime(2022, 01, 02);
+            var str = "2022/01/02";
+            Assert.Equal(expected, str.ToDateTime("yyyy/MM/dd"));
+        }
+
+
         [Theory]
         [InlineData(DayOfWeek.Monday, "Monday")]
         [InlineData(DayOfWeek.Monday, "monday")]
@@ -141,6 +150,14 @@ namespace Butters.Extensions.String.Tests
         [InlineData("IOStream", "IOStream")]
         [InlineData("IOAAAStream", "IOAAAStream")]
         public void ToCamelCaseUpper(string expected, string str) => Assert.Equal(expected, str.ToCamelCaseUpper());
+
+        [Theory]
+        [InlineData("abc", "Abc")]
+        [InlineData("aBc", "aBc")]
+        [InlineData("", "")]
+        [InlineData("a", "A")]
+        [InlineData("abc", "abc")]
+        public void ToFirstCharLowerCase(string expected, string str) => Assert.Equal(expected, str.ToFirstCharLowerCase());
     }
 
     public class TestModel

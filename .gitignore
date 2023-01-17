@@ -42,7 +42,9 @@ docker/
 
 #Copy from dapper
 *.coverage
+coverage/
 .dotnet/*
 BenchmarkDotNet.Artifacts/
 .idea/
 .DS_Store
+codecov.exe

@@ -12,16 +12,8 @@ jobs:
         run: dotnet build Build.csproj -c Release /p:CI=true
       - name: Test
         run: dotnet test Butters.Extensions.String.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage /p:CI=true
-      - name: Upload Code Coverage Report to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.1
         with:
           directory: coverage/**/
-          # filename: coverage/**/coverage.cobertura.xml
-          badge: true
-          fail_below_min: true
-          format: markdown
-          hide_branch_rate: false
-          hide_complexity: true
-          indicators: true
-          path_to_write_report: ./coverage/codecov_report.txt
-          output: both
+          fail_ci_if_error: true

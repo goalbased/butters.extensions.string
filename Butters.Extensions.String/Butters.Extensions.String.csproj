@@ -9,13 +9,14 @@
     <Description>A high performance string extension</Description>
     <Copyright>2023 Butters</Copyright>
     <PackageIcon>butters.png</PackageIcon>
-    <RepositoryUrl>https://github.com/goalbased/butters.extensions.string</RepositoryUrl>
+    <RepositoryUrl>https://github.com/goalbased/butters.extensions.string/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>string,extension,string extension</PackageTags>
+    <PackageTags>string;extension;string extension</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>https://goalbased.github.io/StringExtension/</PackageReleaseNotes>
-    <Version>1.0.3</Version>
+    <PackageReleaseNotes>https://goalbased.github.io/butters.extensions.string/</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/goalbased/butters.extensions.string/</PackageProjectUrl>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>

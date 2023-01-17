@@ -11,9 +11,9 @@ jobs:
       - name: Build .NET project
         run: dotnet build Build.csproj -c Release /p:CI=true
       - name: Test
-        run: dotnet test Butters.Extensions.String.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage /p:CI=true
+        run: dotnet test Butters.Extensions.String.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage /p:CI=true /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
       - name: Codecov
         uses: codecov/codecov-action@v3.1.1
         with:
-          directory: ./coverage/**/
+          # directory: ./coverage/**/
           fail_ci_if_error: true

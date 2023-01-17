@@ -1,3 +1,4 @@
+# Try to replace appveyor by github
 image: Visual Studio 2022
 
 skip_branch_with_pr: true

@@ -39,6 +39,7 @@ logs/
 
 # customer
 docker/
+*.nupkg
 
 #Copy from dapper
 *.coverage

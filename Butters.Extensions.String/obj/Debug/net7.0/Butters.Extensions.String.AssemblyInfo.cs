@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2023 Butters")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A high performance string extension")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3-alpha")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Butters.Extensions.String")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Butters.Extensions.String")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.3.0")]

@@ -32,6 +32,15 @@ Assert.Equal(expected, str.ToSnakeCase());
 
 ## String Extension functions
 
+| Name              | Description                                                                                                                 |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ToByte            | Convert string to byte array                                                                                                |
+| ToBoolean         | Converts string to boolean which is case insensitive <br/>true: "true", "t", "yes", "y" <br/>false: "false", "f", "no", "n" |
+| ToShort           | Converts string to 16-bit signed integer                                                                                    |
+| ToInt16           | This is as same as ToShort()                                                                                                |
+| <code>ToInt<code> |                                                                                                                             |
+| `ToInt32`         |                                                                                                                             |
+
 ## Performance
 
 A key feature of Butters.Extensions.String is performance.

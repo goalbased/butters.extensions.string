@@ -5,6 +5,9 @@ using System.Text.RegularExpressions;
 
 namespace Butters.Extensions.String
 {
+    /// <summary>
+    /// String extension library
+    /// </summary>
     public static partial class StringExtensions
     {
         private static readonly string ExceptionMessageFormat = "{0} is not valid.";
@@ -67,61 +70,132 @@ namespace Butters.Extensions.String
         /// <returns></returns>
         public static short ToInt16(this string str) => str.ToShort();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static int ToInt(this string str) =>
             int.TryParse(str, out var number) ?
             number :
             throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static int ToInt32(this string str) => str.ToInt();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static long ToLong(this string str) =>
             long.TryParse(str, out var number) ?
             number :
             throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static long ToInt64(this string str) => str.ToLong();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static float ToFloat(this string str) =>
             float.TryParse(str, out var number) ?
             number :
             throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static float ToSingle(this string str) => str.ToFloat();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static double ToDouble(this string str) =>
             double.TryParse(str, out var number) ?
             number :
             throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static decimal ToDecimal(this string str) =>
             decimal.TryParse(str, out var number) ?
             number :
             throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="dateTimeFormat"></param>
+        /// <returns></returns>
         public static DateTime ToDateTime(this string str, string dateTimeFormat) =>
             DateTime.TryParseExact(str, dateTimeFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime) ?
             dateTime :
             DateTime.MinValue;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="str"></param>
+        /// <param name="ignoreCase"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static T ToEnum<T>(this string str, bool ignoreCase = true) where T : struct, Enum =>
             Enum.TryParse(str, ignoreCase, out T result) ?
             result :
             throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static T? ToObjectFromJson<T>(this string str) => JsonSerializer.Deserialize<T>(str);
 
         #endregion
 
         #region format
 
-        //TODO performance
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static string ToSnakeCase(this string str)
         {
             return string.Concat(str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString())).ToLower();
         }
 
-        //TODO performance
-        //https://code-maze.com/csharp-convert-string-titlecase-camelcase/
+        /// <summary>
+        /// https://code-maze.com/csharp-convert-string-titlecase-camelcase/
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static string ToCamelCaseLower(this string str)
         {
             var words = str.Split(new[] { "_", " ", "-" }, StringSplitOptions.RemoveEmptyEntries);
@@ -138,10 +212,18 @@ namespace Butters.Extensions.String
             return $"{leadWord}{string.Join(string.Empty, tailWords)}";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static string ToCamelCase(this string str) => ToCamelCaseLower(str);
 
-        //TODO performance
-        //https://code-maze.com/csharp-convert-string-titlecase-camelcase/
+        /// <summary>
+        /// https://code-maze.com/csharp-convert-string-titlecase-camelcase/
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static string ToCamelCaseUpper(this string str)
         {
             var words = str.Split(new[] { "_", " ", "-" }, StringSplitOptions.RemoveEmptyEntries);
@@ -153,7 +235,11 @@ namespace Butters.Extensions.String
             return $"{string.Join(string.Empty, tailWords)}";
         }
 
-        //https://stackoverflow.com/questions/3565015/bestpractice-transform-first-character-of-a-string-into-lower-case
+        /// <summary>
+        /// https://stackoverflow.com/questions/3565015/bestpractice-transform-first-character-of-a-string-into-lower-case
+        /// </summary>
+        /// <param name="str"></param>        
+        /// <returns></returns>        
         public static string? ToFirstCharLowerCase(this string? str)
         {
             if (!string.IsNullOrWhiteSpace(str) && char.IsUpper(str[0]))
@@ -163,9 +249,18 @@ namespace Butters.Extensions.String
         }
 
         #endregion
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static bool IsNullOrEmpty(this string str) => string.IsNullOrEmpty(str);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static bool IsNullOrWhiteSpace(this string str) => string.IsNullOrWhiteSpace(str);
 
     }

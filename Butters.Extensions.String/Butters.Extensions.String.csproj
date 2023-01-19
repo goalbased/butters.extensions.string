@@ -17,6 +17,8 @@
     <PackageReleaseNotes>https://goalbased.github.io/butters.extensions.string/</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/goalbased/butters.extensions.string/</PackageProjectUrl>
     <Version>1.0.4</Version>
+    <!-- <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>../docs/apidoc.xml</DocumentationFile> -->
   </PropertyGroup>
 
   <ItemGroup>

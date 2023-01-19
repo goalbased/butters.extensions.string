@@ -14,14 +14,27 @@ namespace Butters.Extensions.String
 
         #region Convert Type
 
-        public static byte[] ToByte(this string value) => Encoding.UTF8.GetBytes(value);
+        /// <summary>
+        /// Convert string to byte array
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static byte[] ToByte(this string str) => Encoding.UTF8.GetBytes(str);
 
-        public static bool ToBoolean(this string value)
+        /// <summary>
+        /// Converts string to boolean which is case insensitive
+        /// true: "true", "t", "yes", "y"
+        /// false: "false", "f", "no", "n"
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static bool ToBoolean(this string str)
         {
-            if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            if (string.IsNullOrWhiteSpace(str))
+                throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-            var val = value.ToLower().Trim();
+            var val = str.ToLower().Trim();
             return val switch
             {
                 "false" => false,
@@ -32,59 +45,70 @@ namespace Butters.Extensions.String
                 "t" => true,
                 "yes" => true,
                 "y" => true,
-                _ => throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value))
+                _ => throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str))
             };
         }
 
-        public static short ToShort(this string value) =>
-            short.TryParse(value, out var number) ?
+        /// <summary>
+        /// Converts string to 16-bit signed integer
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static short ToShort(this string str) =>
+            short.TryParse(str, out var number) ?
             number :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static short ToInt16(this string value) => value.ToShort();
+        /// <summary>
+        /// Converts string to 16-bit signed integer, this is as same as ToShort()
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static short ToInt16(this string str) => str.ToShort();
 
-        public static int ToInt(this string value) =>
-            int.TryParse(value, out var number) ?
+        public static int ToInt(this string str) =>
+            int.TryParse(str, out var number) ?
             number :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static int ToInt32(this string value) => value.ToInt();
+        public static int ToInt32(this string str) => str.ToInt();
 
-        public static long ToLong(this string value) =>
-            long.TryParse(value, out var number) ?
+        public static long ToLong(this string str) =>
+            long.TryParse(str, out var number) ?
             number :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static long ToInt64(this string value) => value.ToLong();
+        public static long ToInt64(this string str) => str.ToLong();
 
-        public static float ToFloat(this string value) =>
-            float.TryParse(value, out var number) ?
+        public static float ToFloat(this string str) =>
+            float.TryParse(str, out var number) ?
             number :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static float ToSingle(this string value) => value.ToFloat();
+        public static float ToSingle(this string str) => str.ToFloat();
 
-        public static double ToDouble(this string value) =>
-            double.TryParse(value, out var number) ?
+        public static double ToDouble(this string str) =>
+            double.TryParse(str, out var number) ?
             number :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static decimal ToDecimal(this string value) =>
-            decimal.TryParse(value, out var number) ?
+        public static decimal ToDecimal(this string str) =>
+            decimal.TryParse(str, out var number) ?
             number :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static DateTime ToDateTime(this string value, string dateTimeFormat) =>
-            DateTime.TryParseExact(value, dateTimeFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime) ?
+        public static DateTime ToDateTime(this string str, string dateTimeFormat) =>
+            DateTime.TryParseExact(str, dateTimeFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime) ?
             dateTime :
             DateTime.MinValue;
 
-        public static T ToEnum<T>(this string value, bool ignoreCase = true) where T : struct, Enum =>
-            Enum.TryParse(value, ignoreCase, out T result) ?
+        public static T ToEnum<T>(this string str, bool ignoreCase = true) where T : struct, Enum =>
+            Enum.TryParse(str, ignoreCase, out T result) ?
             result :
-            throw new ArgumentException(string.Format(ExceptionMessageFormat, value), nameof(value));
+            throw new ArgumentException(string.Format(ExceptionMessageFormat, str), nameof(str));
 
-        public static T? ToObjectFromJson<T>(this string value) => JsonSerializer.Deserialize<T>(value);
+        public static T? ToObjectFromJson<T>(this string str) => JsonSerializer.Deserialize<T>(str);
 
         #endregion
 
@@ -139,5 +163,10 @@ namespace Butters.Extensions.String
         }
 
         #endregion
+
+        public static bool IsNullOrEmpty(this string str) => string.IsNullOrEmpty(str);
+
+        public static bool IsNullOrWhiteSpace(this string str) => string.IsNullOrWhiteSpace(str);
+
     }
 }

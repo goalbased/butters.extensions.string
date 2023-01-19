@@ -19,9 +19,7 @@ Located at [goalbased.github.io/butters.extensions.string](https://goalbased.git
 
 Butters.Extensions.String is a [NuGet library](https://www.nuget.org/packages/Butters.Extensions.String) that you can add in to your project that will extend your `string` class which provide faster and many useful extensions.
 
-## Execute a query and map the results to a strongly typed List
-
-Example usage:
+## Usage
 
 ```csharp
 using Butters.Extensions.String;
@@ -31,6 +29,8 @@ var str = "nameOfProperty"
 
 Assert.Equal(expected, str.ToSnakeCase());
 ```
+
+## String Extension functions
 
 ## Performance
 
